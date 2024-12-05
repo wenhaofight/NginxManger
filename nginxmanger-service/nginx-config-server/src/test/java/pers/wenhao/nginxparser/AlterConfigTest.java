@@ -59,6 +59,6 @@ public class AlterConfigTest extends ParseTestBase {
             NgxConfig conf = parse("nested/c4.conf");
             conf.removeAll(null);
         });
-        Assertions.assertEquals("Item can not be null", exception.getMessage());
+        Assertions.assertEquals("Items can not be null", exception.getMessage());
     }
 }
