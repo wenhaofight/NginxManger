@@ -12,6 +12,9 @@
 
     <artifactId>nginxmanger-service</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
-
+    <modules>
+        <module>nginx-config-server</module>
+    </modules>
 </project>
