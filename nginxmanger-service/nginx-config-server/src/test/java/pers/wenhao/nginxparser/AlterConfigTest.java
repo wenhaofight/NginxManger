@@ -60,6 +60,5 @@ public class AlterConfigTest extends ParseTestBase {
             conf.removeAll(null);
         });
         Assertions.assertEquals("Items can not be null", exception.getMessage());
-
     }
 }
