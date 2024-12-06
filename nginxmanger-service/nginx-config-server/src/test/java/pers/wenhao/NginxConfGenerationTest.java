@@ -76,7 +76,7 @@ public class NginxConfGenerationTest {
         for (int i = 0; i < 10; i++) {
             ngxConfig.addEntry(ngxBlockHttp);
         }
-        ngxConfig.addEntry(ngxBlockHttp);
+//        ngxConfig.addEntry(ngxBlockHttp);
 
         NgxDumper dumper = new NgxDumper(ngxConfig);
 //        dumper.dump(System.out);
