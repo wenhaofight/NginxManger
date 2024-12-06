@@ -4,16 +4,19 @@ import com.github.odiszapc.nginxparser.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class NginxConfParseTest {
+public class NginxConfParseTest {
     @Test
     void nginxConfParseTest() throws IOException {
         // How to perform basic parsing of the following Nginx config:
-        NgxConfig conf = NgxConfig.read("src/test/resources/nginx.conf");
+        String path = "nginx.conf";
+        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
+        NgxConfig conf = NgxConfig.read(inputStream);
         NgxParam workers = conf.findParam("worker_processes");       // Ex.1
         String value = workers.getValue();// "1"
         assertEquals("1", value);
